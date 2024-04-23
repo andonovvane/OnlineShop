@@ -1,0 +1,143 @@
+body{
+    background-color: rgb(221, 218, 218);
+}
+
+/* header */
+
+
+#header {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid;
+    border-radius: 2rem;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.3);
+}
+
+#header .active {
+    background-color: black;
+    color: white;
+}
+
+#left-section {
+    margin: 0 0 0 2rem;
+}
+
+#left-section .active h1{
+    color: black;
+}
+
+#left-section a {
+    color: black;
+    text-decoration: none;
+}
+
+#right-section {
+    padding: 2rem 2rem 1rem 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 20%;
+    font-size: 1.5rem;
+}
+
+#right-section a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#right-section button {
+    background-color: black;
+    color: white;
+    padding: 4px 7px;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+#right-section button:hover {
+    cursor: pointer;
+}
+
+/* main */
+
+.product-grid {
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 50px;
+}
+
+.product-card {
+    background-color: white;
+    width: 300px;
+    height: 200px; /* Corrected typo: px instead of ox */
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+
+.section button {
+    border-radius: 5px;
+    padding: 6px 11px;
+    background-color: rgba(0, 0, 0, 0.821);
+    color: white;
+}
+
+.section button:hover {
+    cursor: pointer;
+}
+
+/*** Login ***/
+
+#login {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10rem;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    gap: 1rem;
+}
+
+#register {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4rem;
+}
+
+#register a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*  Register  */
+
+#register-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+    gap: 2rem;
+}
+
+#register-form input{
+    padding: 0.5rem;
+}
