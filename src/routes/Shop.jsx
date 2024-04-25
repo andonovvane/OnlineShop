@@ -1,8 +1,19 @@
 import { useEffect, useState } from "react";
 import axios from 'axios'
+import { addItem } from "../store/slices/cart";
+import { useDispatch } from "react-redux"
+
+const truncateText = (text, maxLength) => {
+    if (text.length <= maxLength) {
+        return text;
+    } else {
+        return text.substring(0, maxLength).trim() + '...';
+    }
+}
 
 export default function Shop () {
     const [products, setProducts] = useState([])
+    const dispatch = useDispatch()
 
 
     const fetchProducts = async () => {
@@ -21,6 +32,10 @@ export default function Shop () {
         fetchProducts();
     }, [])
 
+    const addToCart = (id) => {
+        dispatch(addItem(id))
+    }
+
     if (products.length === 0) {
         return <p>Loading...</p>;
     } else {
@@ -30,11 +45,11 @@ export default function Shop () {
                     <div key={product.id} className="section">
                         <div  className="product-card">
                             <h2>{product.title}</h2>
-                            <p>{product.description}</p>
+                            <p>{truncateText(product.description, 80)}</p>
                             <h3>CHF {product.price}</h3>
                         </div>
                         <div>
-                            <button>Add to card</button>
+                            <button onClick={() => addToCart(product)}>Add to card</button>
                         </div>
                     </div>
                 ))}

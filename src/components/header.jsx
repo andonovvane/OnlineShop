@@ -1,7 +1,10 @@
 import { NavLink } from "react-router-dom";
 import "./header.css"
+import { computeTotalItems } from "../store/slices/cart";
+import { useSelector } from "react-redux"
 
 export default function Header () {
+    // const totalItems = useSelector(state => computeTotalItems(state.cart));
 
     return (
         <div id="header">
@@ -15,7 +18,7 @@ export default function Header () {
                 <NavLink to={"/"}>Shop</NavLink>
                 <span>
                     <NavLink to={"/cart"}>Cart</NavLink>
-                    <span> (0)</span>
+                    {/* <span>{totalItems}</span> */}
                 </span>
             </div>
         </div>

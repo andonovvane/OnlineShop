@@ -5,8 +5,8 @@ import { useDispatch } from "react-redux";
 import { login, loadUser } from "../store/slices/user"
 
 export default function Login () {
-    const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
+    const [email, setEmail] = useState("andonov.vane2@gmail.com")
+    const [password, setPassword] = useState("andonov")
     const [loginError, setLoginError] = useState("")
 
     const dispatch = useDispatch();
