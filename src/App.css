@@ -141,3 +141,63 @@ body{
 #register-form input{
     padding: 0.5rem;
 }
+
+
+/*** Cart ****/
+
+#card-header {
+    margin: auto 3.5rem auto 3.5rem;
+}
+
+hr{
+    border-width: 0.5em;
+    border-color: black;
+    border-style: solid;
+}
+
+.cart-ul {
+    padding: 0 0 0 1.8rem;
+}
+
+.cart-li{
+    margin: auto 4rem auto 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid;
+    align-items: center;
+}
+
+.cart-li div {
+    width: 5rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.cart-li h2 {
+    width: 20rem;
+}
+
+.cart-li p {
+    width: 7rem;
+    font-size: large;
+}
+
+.cart-button {
+    height: 50%;
+    padding: 5px 15px;
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+#total-amount {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 6rem;
+}
+
+#cart-title-div {
+    width: fit-content;
+}
